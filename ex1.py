@@ -56,5 +56,16 @@ for i in range(35):
     time_taken = timeit.timeit(lambda:opt_func(i), number = 1)
     optimized_results.append(time_taken)
 
-print(unoptimized_results)
-print(optimized_results)
+plt.plot(range(35), unoptimized_results)
+plt.xlabel("n")
+plt.ylabel("time")
+plt.ylim(0, 0.8)
+plt.savefig("ex1.6.1.jpg")
+plt.close()
+
+plt.plot(range(35), optimized_results)
+plt.ylabel("time")
+plt.xlabel("n")
+plt.ylim(0, 0.8)
+plt.savefig("eg1.6.2.jpg")
+plt.close()
